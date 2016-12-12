@@ -1,0 +1,275 @@
+/*Global Styles*/
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica",Arial,sans-serif;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 1.4em;
+	color: #000;
+}
+
+img {
+	max-width: 100%;
+}
+
+/*Typography*/
+a {
+	color: rgb(196, 80, 130);
+	transition: all .5s ease;
+	-webkite-transition: all .5s ease;
+}
+
+a:hover {
+	color: rgb(255, 225, 0);
+	font-weight: bold;
+}
+
+a.active {
+	color: rgb(33, 185, 209);
+}
+
+.socialpage a {
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+}
+
+.socialpage a:hover {
+	-webkit-filter: blur(2px); /* Safari */
+    filter: blur(2px);
+}
+
+/*Header+Navigation*/
+header {
+		margin: 50px auto;
+		text-align: center;
+}
+
+header img {
+	margin: auto;
+	max-width: 80px;
+}
+
+.home {
+	top: 80px;
+	left: 30px;
+  -webkit-transform: rotate(270deg);  
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);  
+    position: absolute;
+}
+
+.about {
+	top: 80px;
+	right: 30px;
+	position: absolute;
+	-webkit-transform: rotate(90deg);  
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);  
+}
+
+.contact {
+	bottom: 10px;
+	left: 70px;
+	padding-bottom: 80px;
+	-webkit-transform: rotate(270deg);  
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);  
+    position: absolute;
+    z-index: 999;
+}
+
+.social {
+	bottom: 10px;
+	right: 70px;
+	padding-bottom: 80px;
+	position: absolute;
+  -webkit-transform: rotate(90deg);  
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    z-index: 99999;
+}
+
+nav {
+	font-family: 'Meera Inimai', sans-serif;
+}
+
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: none;
+}
+
+/* Float the list items side by side */
+ul.topnav li {
+	float: left;
+	overflow: hidden;
+}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+        overflow: hidden;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #555;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+/*Page Layout*/
+.container {
+	position: relative;
+	margin: 50px auto;
+    text-align: center;
+}
+
+div#masonry {
+  display: flex; 
+  margin: auto;
+  flex-direction: column; 
+  flex-wrap: wrap;
+  height: 100%;
+  max-width: 700px;
+  font-size: 0;
+  justify-content: center;
+}
+
+div#masonry a {
+	width: 33.3%;
+	text-align: center;
+	line-height: 0;
+}
+
+div#masonry a img {
+	max-width: 100%;
+}
+
+div#masonry a img:hover {
+	max-width: 100%;
+	-webkit-filter: hue-rotate(270deg); /* Safari */
+    filter: hue-rotate(270deg);
+}
+
+
+/* fallback for earlier versions of Firefox */
+
+@supports not (flex-wrap: wrap) {
+  div#masonry { display: block; }
+  div#masonry img {  
+  display: inline-block;
+  vertical-align: top;
+  }
+}
+
+
+/*Content*/
+.content {
+	max-width: 550px;
+	margin: 50px auto; 
+	text-align: center;
+}
+
+.content p {
+	margin-bottom: 1em;
+	line-height: 2.5em;
+	margin-top: 50px;
+	font-family: 'Lora', serif;
+	font-size: 14px;
+}
+
+.contactpage p {
+	margin-bottom: 1em;
+	line-height: 2.5em;
+	margin-top: 150px;
+	font-family: 'Lora', serif;
+	font-size: 14px;
+}
+
+.socialpage img {
+	margin-bottom: 1em;
+	line-height: 2.5em;
+	margin-top: 150px;
+	max-width: 50px;
+	max-height: 50px;
+}
+
+
+/*Footer*/
+
+
+
+/*Media Queries*/
+/*For Laptop*/
+@media screen and (min-width:600px) {
+	ul.topnav li:not(:first-child) {
+		display: none;
+	}
+	ul.topnav #myTopnav {
+		display: none;
+	}
+
+  ul.topnav li.icon {
+    float: right;
+    display: none;
+  }
+}
+	.container {
+		min-width: 600px;
+	}
+
+	div#masonry {
+		max-height: 800px;
+	}
+
+}
+
+/*For Mobile Phones*/
+@media screen and (max-width:599px) {
+.container {
+	max-width:599px;
+}
+	div#masonry a {
+	width: 100%;
+	text-align: center;
+	line-height: 0;
+	}
+
+}
+
+ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
